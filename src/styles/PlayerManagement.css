@@ -1,0 +1,161 @@
+.player-management-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.management-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.management-header h2 {
+  color: var(--dark);
+  margin: 0;
+}
+
+.player-count {
+  background: var(--primary);
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 2rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.add-player-section {
+  margin-bottom: 2rem;
+}
+
+.btn-add-player {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.add-player-form {
+  background: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+  display: grid;
+  grid-template-columns: 1fr 1fr auto auto;
+  gap: 1rem;
+  align-items: end;
+}
+
+.add-player-form input,
+.add-player-form select {
+  padding: 0.75rem;
+  border: 2px solid var(--border);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.add-player-form input:focus,
+.add-player-form select:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.add-player-form .btn-save,
+.add-player-form .btn-cancel {
+  padding: 0.75rem 1rem;
+  margin: 0;
+  min-width: 100px;
+}
+
+.players-list {
+  background: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: var(--shadow);
+  margin-bottom: 2rem;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 2rem;
+  color: #6b7280;
+}
+
+.players-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.player-item {
+  background: linear-gradient(135deg, #f5f3ff 0%, #e0e7ff 100%);
+  border: 2px solid var(--border);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.player-item:hover {
+  border-color: var(--primary);
+  box-shadow: var(--shadow);
+  transform: translateY(-2px);
+}
+
+.player-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 0.75rem;
+}
+
+.player-item-header h4 {
+  color: var(--dark);
+  margin: 0;
+  font-size: 1rem;
+}
+
+.player-role-badge {
+  background: var(--primary);
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.player-item-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+.management-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.management-actions .btn-primary,
+.management-actions .btn-secondary {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .add-player-form {
+    grid-template-columns: 1fr;
+  }
+
+  .add-player-form .btn-save,
+  .add-player-form .btn-cancel {
+    grid-column: auto;
+  }
+
+  .players-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+}

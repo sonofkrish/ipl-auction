@@ -1,0 +1,282 @@
+.auction-container {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 2rem;
+  max-width: 1400px;
+}
+
+.auction-header {
+  grid-column: 1 / -1;
+  margin-bottom: 1rem;
+}
+
+.auction-header h2 {
+  color: var(--dark);
+  margin-bottom: 0.5rem;
+}
+
+.auction-stats {
+  font-size: 0.95rem;
+  color: #6b7280;
+}
+
+.auction-main {
+  background: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: var(--shadow-lg);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.player-on-auction {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.player-card-large {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+  width: 100%;
+  max-width: 280px;
+}
+
+.player-name {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.player-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.player-details .role {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.price-info {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.base-info,
+.current-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+}
+
+.current-price {
+  font-size: 1.3rem !important;
+  font-weight: 700 !important;
+}
+
+.bidding-section h3 {
+  color: var(--dark);
+  margin-bottom: 1rem;
+}
+
+.team-selection {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.team-btn {
+  padding: 1rem;
+  background: white;
+  border: 3px solid;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+.team-btn:hover {
+  transform: translateX(4px);
+}
+
+.team-btn.selected {
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.team-name {
+  font-weight: 700;
+  color: var(--dark);
+  font-size: 0.95rem;
+}
+
+.team-budget,
+.team-players {
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin-top: 0.25rem;
+}
+
+.bid-input-section {
+  margin-bottom: 1.5rem;
+}
+
+.bid-input-section label {
+  display: block;
+  font-weight: 600;
+  color: var(--dark);
+  margin-bottom: 0.5rem;
+}
+
+.bid-input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.bid-input-wrapper input {
+  flex: 1;
+  padding: 0.75rem;
+  border: 2px solid var(--border);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.bid-input-wrapper input:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.bid-in-lakhs {
+  font-size: 0.9rem;
+  color: #6b7280;
+  white-space: nowrap;
+}
+
+.bidding-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.bid-summary {
+  background: #f0f9ff;
+  border-left: 4px solid var(--primary);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.95rem;
+  color: var(--dark);
+}
+
+.auction-sidebar {
+  background: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: var(--shadow-lg);
+  height: fit-content;
+  position: sticky;
+  top: 100px;
+}
+
+.auction-sidebar h3 {
+  color: var(--dark);
+  margin-bottom: 1rem;
+}
+
+.teams-overview {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.team-overview-item {
+  background: var(--light);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  display: flex;
+  gap: 0.75rem;
+}
+
+.team-color-bar {
+  width: 4px;
+}
+
+.team-info {
+  flex: 1;
+  padding: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.team-info strong {
+  color: var(--dark);
+  font-size: 0.9rem;
+}
+
+.team-info span {
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+.auction-complete {
+  background: white;
+  border-radius: 1rem;
+  padding: 3rem 2rem;
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+}
+
+.auction-complete h2 {
+  color: var(--success);
+  margin-bottom: 0.5rem;
+  font-size: 1.8rem;
+}
+
+.auction-complete p {
+  color: #6b7280;
+}
+
+@media (max-width: 1024px) {
+  .auction-container {
+    grid-template-columns: 1fr;
+  }
+
+  .auction-main {
+    grid-template-columns: 1fr;
+  }
+
+  .auction-sidebar {
+    position: static;
+  }
+}
+
+@media (max-width: 480px) {
+  .auction-main {
+    padding: 1rem;
+  }
+
+  .bidding-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .team-selection {
+    grid-template-columns: 1fr;
+  }
+}
